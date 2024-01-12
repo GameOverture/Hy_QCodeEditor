@@ -1,0 +1,3 @@
+
+HARMONY CHANGES:
+	Modified CMakeLists.txt Qt dependancy syntax so it doesn't have any problems integrating

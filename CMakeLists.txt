@@ -75,9 +75,10 @@ set(CMAKE_AUTOMOC On)
 set(CMAKE_AUTORCC ON)
 
 # Find includes in corresponding build directories
-find_package(Qt5Core    CONFIG REQUIRED)
-find_package(Qt5Widgets CONFIG REQUIRED)
-find_package(Qt5Gui     CONFIG REQUIRED)
+find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
+#find_package(Qt5Core    CONFIG REQUIRED)
+#find_package(Qt5Widgets CONFIG REQUIRED)
+#find_package(Qt5Gui     CONFIG REQUIRED)
 
 add_library(QCodeEditor STATIC
     ${RESOURCES_FILE}
