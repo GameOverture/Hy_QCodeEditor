@@ -6,9 +6,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC On)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5Core    CONFIG REQUIRED)
-find_package(Qt5Widgets CONFIG REQUIRED)
-find_package(Qt5Gui     CONFIG REQUIRED)
+find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
+#find_package(Qt5Core    CONFIG REQUIRED)
+#find_package(Qt5Widgets CONFIG REQUIRED)
+#find_package(Qt5Gui     CONFIG REQUIRED)
 
 add_executable(QCodeEditorExample
     resources/demo_resources.qrc
@@ -22,8 +23,8 @@ target_include_directories(QCodeEditorExample PUBLIC
 )
 
 target_link_libraries(QCodeEditorExample
-    Qt5::Core
-    Qt5::Widgets
-    Qt5::Gui
+    Qt6::Core
+    Qt6::Widgets
+    Qt6::Gui
     QCodeEditor
 )
